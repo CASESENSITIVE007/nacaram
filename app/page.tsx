@@ -1,6 +1,7 @@
 import { ProductCarousel } from "@/components/Carousel";
 import Nav from "@/components/Nav";
 import PreNav from "@/components/PreNav";
+import ProductsCollection from "@/components/ProductsCollection";
 import ProductsShowcase from "@/components/ProductsShowcase";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -11,16 +12,10 @@ export default function Home() {
     <main className="">
       <PreNav />
       <Nav />
-      <div className="flex flex-col justify-center ">
-        <ProductCarousel />
+      <ProductCarousel />
+      <div className="flex flex-col justify-center mt-4 px-8">
         <ProductsShowcase />
-      </div>
-      <div>Well I made a next app finally</div>
-      <div>
-        Click this Button to go to the next page{" "}
-        <Link href="/about">
-          <Button>About</Button>
-        </Link>{" "}
+        <ProductsCollection />
       </div>
     </main>
   );
