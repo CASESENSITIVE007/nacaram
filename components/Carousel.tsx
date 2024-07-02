@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-export function ProductCarousel() {
+export default function defaultProductCarousel() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnMouseEnter: true })
   );
@@ -27,7 +27,7 @@ export function ProductCarousel() {
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
-            <div className="p-1">
+            <div className="p-1 flex justify-center">
               <Image src={carimage} alt="logo" />
             </div>
           </CarouselItem>

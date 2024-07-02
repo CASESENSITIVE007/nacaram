@@ -1,4 +1,7 @@
-import { ProductCarousel } from "@/components/Carousel";
+import AboutCraftmanship from "@/components/AboutCraftmanship";
+import ProductCarousel from "@/components/Carousel";
+import Footer from "@/components/Footer";
+import MustHaves from "@/components/MustHaves";
 import Nav from "@/components/Nav";
 import PreNav from "@/components/PreNav";
 import ProductsCollection from "@/components/ProductsCollection";
@@ -14,9 +17,12 @@ export default function Home() {
       <Nav />
       <ProductCarousel />
       <div className="flex flex-col justify-center mt-4 px-8">
+        <MustHaves />
+        <AboutCraftmanship />
         <ProductsShowcase />
         <ProductsCollection />
       </div>
+      <Footer />
     </main>
   );
 }
