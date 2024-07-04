@@ -1,48 +1,63 @@
 import React from 'react'
-import './Footer.css'
+import background from '../components/bgimg.jpg'
+
+// import './Footer.css'
 import{
     InstagramIcon,
     FacebookIcon,
     TwitterIcon,
     Twitter
+    
 }from "lucide-react";
-// import footer_logo from '../assets/logo_big.png'
-// import instagram_icon from '../assets/instagram_icon.png'
-// import pintester_icon from '../assets/pintester_icon.png'
-// import whatsapp_icon from '../assets/whatsapp_icon.png'
 const Footer = () => {
     return (
-        <div className='footer'>
-            <div className="footer-log0">
-                {/* <img src={footer_logo} alt="" /> */}
-                <br />
-                <br />
-                <br />
-                <br />
-                <p>Nacaram</p>
+        
+        <div className='  footer bg-yellow-100  h-2/6 mt-12 mr-0 mb-0 pt-12 pr-0 pb-8  font-extralight '>
+            <div className="upper flex justify-around  text-center  border-b border-white  ">
+            <div className="home-div border-t border-white  ">
+                <p className=' mt-2 ' >Home</p>
+                <p>ABOUT</p>
+                <p>CONTACT</p>
+                <p>WHOLESALE SITE</p>
             </div>
-            <ul className="footer-links">
-                {/* <li>Company</li> */}
-                <li>Products</li>
-                {/* <li>Offices</li> */}
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-            <div className="footer-social-icons ">
-                <div className="footer-icons-container">
-                    <InstagramIcon/>
-                </div>
-                <div className="footer-icons-container">
-                  <FacebookIcon/>
-                </div>
-                <div className="footer-icons-container">
-                    <TwitterIcon/>
-                </div>
+            <div className="privacy border-t border-white">
+                <p className=' mt-2'>SHIPPING & RETURNS</p>
+                <p>PRIVACY POLICY</p>
+            </div>
+            <div className="subscribe border-t border-white">
+                <p className=' mt-2' >Subscribe to our newsletter for Nacaram</p>
+                <p>news for promotion</p>
+                <form className=''>
+                    <input className='border-none outline-none  bg-white mt-2  h-10 p-2 ' type="text" placeholder='Enter Email Address' />
+                    <button className=' bg-black text-white h-10 w-12' >Join</button>
+                </form>
+            </div>
+            <div className="aboutus border-t border-white">
+                
+                <p className=' mt-2' >ABOUT US</p>
+                <br />
+                <p>Lorem ipsum dolor sit amet crm dolorum t <br />
+                    otam necessitatibus? Dolorem, v <br />
+                    itae dolores?</p>
+                
+            </div>
             </div>
 
-            <div className="footer-copyright">
-                <hr />
-                <p>Copyright @ 2024 - All Right Reserved</p>
+            <div className="lower  ">
+                <div className="socialIcons flex justify-center gap-4 mt-8 mr-3.5 mb-5 pt-8 pr-0 pb-0  ">
+                <div className='insta' >
+                    <InstagramIcon/>
+                </div>
+                <div className='fb' >
+                    <FacebookIcon/>
+                </div>
+                <div className='twitter' >
+                    <TwitterIcon/>
+                </div>
+                </div>
+
+                <p className='text-center m-8  ' >COPYRIGHT @ 2024 Nacaram</p>
+               
             </div>
         </div>
     )
