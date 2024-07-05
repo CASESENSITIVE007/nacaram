@@ -3,9 +3,9 @@ import image from "../public/bag.png";
 import Image from "next/image";
 
 const images = [
-  { src: image, alt: "image" },
-  { src: image, alt: "image" },
-  { src: image, alt: "image" },
+  { id: 1, src: image, alt: "image" },
+  { id: 1, src: image, alt: "image" },
+  { id: 1, src: image, alt: "image" },
 ];
 
 export default function ProductsShowcase() {
@@ -18,7 +18,10 @@ export default function ProductsShowcase() {
       </div>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2 mx-6">
         {images.map((image) => (
-          <Card className="border-none flex flex-col items-center">
+          <Card
+            className="border-none flex flex-col items-center"
+            key={image.id}
+          >
             <CardContent className="p-0 ">
               <Image src={image.src} width={500} height={500} alt={image.alt} />
             </CardContent>

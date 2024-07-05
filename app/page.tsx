@@ -6,9 +6,6 @@ import Nav from "@/components/Nav";
 import PreNav from "@/components/PreNav";
 import ProductsCollection from "@/components/ProductsCollection";
 import ProductsShowcase from "@/components/ProductsShowcase";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
