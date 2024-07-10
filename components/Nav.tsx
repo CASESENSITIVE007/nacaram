@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export default function Nav() {
   return (
-    <header className="flex md:flex-col w-full shrink-0 items-center px-4 md:px-6 justify-between gap-2">
+    <div className="flex md:flex-col w-full shrink-0 items-center px-4 md:px-6 justify-between gap-2">
       <Sheet>
-        <Link href="#" className="mr-6 md:flex" prefetch={false}>
+        <Link href="/" className="mr-6 md:flex">
           <Image src="/logo.png" alt="nacaram" width={100} height={100} />
           <span className="sr-only">Nacaram</span>
         </Link>
@@ -19,9 +19,9 @@ export default function Nav() {
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
-          <Link href="#" className="mr-6  md:flex" prefetch={false}>
+          <Link href="/" className="mr-6  md:flex" prefetch={false}>
             <Image src="/logo.png" alt="nacaram" width={100} height={100} />
-            <span className="sr-only">Acme Inc</span>
+            <span className="sr-only">Nacaram</span>
           </Link>
           <div className="grid gap-2 py-6">
             <Link
@@ -39,11 +39,11 @@ export default function Nav() {
               About
             </Link>
             <Link
-              href="#"
+              href="/all-products"
               className="flex w-full items-center py-2 text-lg font-semibold"
               prefetch={false}
             >
-              Services
+              Products
             </Link>
             <Link
               href="#"
@@ -56,14 +56,14 @@ export default function Nav() {
         </SheetContent>
       </Sheet>
       <nav className="mx-auto hidden md:flex gap-6 ">
-        <Link href="#" prefetch={false}>
+        <Link href="/" prefetch={false}>
           <Button variant="link">Home</Button>
         </Link>
         <Link href="/about" prefetch={false}>
           <Button variant="link">About</Button>
         </Link>
-        <Link href="#" prefetch={false}>
-          <Button variant="link">Services</Button>
+        <Link href="/all-products" prefetch={false}>
+          <Button variant="link">Products</Button>
         </Link>
         <Link href="#" prefetch={false}>
           <Button variant="link">Contact</Button>
@@ -72,7 +72,7 @@ export default function Nav() {
           <Button variant="link">Log in</Button>
         </Link>
       </nav>
-    </header>
+    </div>
   );
 }
 

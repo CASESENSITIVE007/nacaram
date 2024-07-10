@@ -1,8 +1,9 @@
 "use client";
 
 import * as React from "react";
-import carimage from "../public/image.png";
+import carimage from "../public/slide.png";
 import Autoplay from "embla-carousel-autoplay";
+import { cn } from "@/lib/utils";
 
 import {
   Carousel,
@@ -13,16 +14,16 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-export default function defaultProductCarousel() {
+export default function defaultProductCarousel(props: any) {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnMouseEnter: true })
+    Autoplay({ delay: 2000, stopOnMouseEnter: true }),
   );
 
   return (
     <Carousel
       opts={{ loop: true, align: "center" }}
       plugins={[plugin.current]}
-      className="w-full"
+      className={cn(props.className, "w-full")}
     >
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
