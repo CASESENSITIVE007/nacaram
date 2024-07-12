@@ -17,15 +17,17 @@ const images = [
 
 export default function MustHaves() {
   return (
-    <div className="flex shrink-1 justify-between m-8 ">
-      <Card className="min-w-max p-4 flex flex-col gap-4 justify-center border-none">
-        <span className="text-xl font-bold">Must Haves</span>
-        <span className="text-sm text-muted-foreground">
-          Bestsellers among our collection
-        </span>
-        <Button className="w-3/4 bg-lime-500">Shop Now</Button>
+    <section className="flex flex-col md:flex-row gap-4 mx-6">
+      <Card className="w-full flex justify-between items-center gap-2 md:flex-col md:items-start md:justify-center basis-1/3 border-none ">
+        <div className="flex flex-col">
+          <span className="text-xl font-bold">Must Haves</span>
+          <span className="text-sm text-muted-foreground">
+            Bestsellers among our collection
+          </span>
+        </div>
+        <Button className="max-w-fit bg-primary">Shop Now</Button>
       </Card>
-      <div className="grid justify-items-center grid-cols-2 gap-8 md:grid-cols-3 mx-6 ">
+      <div className="grid justify-items-center grid-cols-2 gap-2 md:grid-cols-3 ">
         {images.map((image) => (
           <Card className=" " key={image.id}>
             <CardContent className="p-0 h-500">
@@ -36,11 +38,11 @@ export default function MustHaves() {
               <span className="text-sm text-muted-foreground">
                 Bestsellers among our collection
               </span>
-              <Button className="w-1/2 bg-lime-500">Shop Now</Button>
+              <Button className=" bg-lime-500">Shop Now</Button>
             </CardFooter>
           </Card>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

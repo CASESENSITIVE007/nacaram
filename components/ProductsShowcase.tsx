@@ -10,7 +10,7 @@ const images = [
 
 export default function ProductsShowcase() {
   return (
-    <div className="flex flex-col mx-6">
+    <section className="flex flex-col mx-6">
       <div className="h-5 border-b-2 border-zinc-200 text-2xl text-center my-10">
         <span className="bg-white px-5 font-serif font-semibold">
           Featured Bags
@@ -32,6 +32,6 @@ export default function ProductsShowcase() {
           </Card>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

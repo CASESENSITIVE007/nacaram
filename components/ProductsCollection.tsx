@@ -15,7 +15,7 @@ const images = [
 
 export default function ProductsCollection() {
   return (
-    <div className="flex flex-col mx-6">
+    <section className="flex flex-col mx-6">
       <div className="h-5 border-b-2 border-zinc-200 text-2xl text-center my-10">
         <span className="bg-white px-5 font-serif font-semibold">
           Collections
@@ -33,6 +33,6 @@ export default function ProductsCollection() {
           </Card>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
