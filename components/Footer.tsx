@@ -1,7 +1,7 @@
 import React from 'react'
 import background from '../components/bgimg.jpg'
 
-// import './Footer.css'
+
 import{
     InstagramIcon,
     FacebookIcon,
@@ -13,7 +13,7 @@ const Footer = () => {
     return (
         
         <div className='  footer bg-yellow-100  h-2/6 mt-12 mr-0 mb-0 pt-12 pr-0 pb-8  font-extralight '>
-            <div className="upper flex justify-around  text-center  border-b border-white  ">
+            <div className="upper md:block justify-around  text-center  border-b border-white sm:block lg:flex   ">
             <div className="home-div border-t border-white  ">
                 <p className=' mt-2 ' >Home</p>
                 <p>ABOUT</p>
