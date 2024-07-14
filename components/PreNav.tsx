@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const PreNav: React.FC = () => {
   return (
-    <div className="bg-yellow-200 text-gray-800">
+    <div className="bg-[#efe09f] text-gray-800">
       <div className="flex justify-between items-center p-4">
         <div className="flex space-x-4">
           <a
