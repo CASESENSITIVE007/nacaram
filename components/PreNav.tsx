@@ -35,9 +35,7 @@ const PreNav: React.FC = () => {
             rel="noopener noreferrer"
           ></a>
         </div>
-        <div className="text-center">
-          Free Shipping to the Contiguous Spain for Orders Over $50!
-        </div>
+        <div className="text-center">Free Shipping</div>
         <div className="flex space-x-4">
           <Link href="/search">
             <SearchIcon className="w-5 h-5" />

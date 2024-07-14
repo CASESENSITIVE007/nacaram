@@ -1,22 +1,19 @@
-import { ProductCarousel } from "@/components/Carousel";
-import Nav from "@/components/Nav";
-import PreNav from "@/components/PreNav";
+import AboutCraftmanship from "@/components/AboutCraftmanship";
+import Carousel from "@/components/Carousel";
+import MustHaves from "@/components/MustHaves";
 import ProductsCollection from "@/components/ProductsCollection";
 import ProductsShowcase from "@/components/ProductsShowcase";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="">
-      <PreNav />
-      <Nav />
-      <ProductCarousel />
-      <div className="flex flex-col justify-center mt-4 px-8">
+    <div className="">
+      <Carousel />
+      <div className="flex flex-col justify-center mt-4 md:px-8">
+        <MustHaves />
+        <AboutCraftmanship />
         <ProductsShowcase />
         <ProductsCollection />
       </div>
-    </main>
+    </div>
   );
 }
