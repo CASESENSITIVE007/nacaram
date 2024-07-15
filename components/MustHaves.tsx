@@ -9,10 +9,26 @@ import image from "../public/onsale.png";
 import Image from "next/image";
 import { Button } from "./ui/button";
 
+import Link from "next/link";
+import { title } from "process";
+
 const images = [
-  { id: 1, src: image, alt: "image" },
-  { id: 2, src: image, alt: "image" },
-  { id: 3, src: image, alt: "image" },
+  {
+    id: 1,
+    src: image,
+    alt: "image",
+    href: "/shop/Clutches",
+    title: "Clutches",
+  },
+  { id: 2, src: image, alt: "image", href: "/shop/Totes", title: "Totes" },
+  {
+    id: 3,
+    src: image,
+    alt: "image",
+    href: "/shop/Satchels",
+    title: "Satchels",
+  },
+
 ];
 
 export default function MustHaves() {
@@ -34,11 +50,15 @@ export default function MustHaves() {
               <Image src={image.src} width={500} height={500} alt={image.alt} />
             </CardContent>
             <CardFooter className="p-4  flex-col items-start gap-4">
-              <span className="text-xl font-bold">Collection {image.id}</span>
+
+              <span className="text-xl font-bold">{image.title}</span>
               <span className="text-sm text-muted-foreground">
                 Bestsellers among our collection
               </span>
-              <Button className=" bg-lime-500">Shop Now</Button>
+              <Link href={image.href}>
+                <Button>Shop Now</Button>
+              </Link>
+
             </CardFooter>
           </Card>
         ))}

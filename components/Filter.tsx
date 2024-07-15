@@ -1,5 +1,13 @@
-// src/components/Filter.tsx
+
 import React from "react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+
 
 interface FilterProps {
   categories: string[];
@@ -13,19 +21,22 @@ const Filter: React.FC<FilterProps> = ({
   onCategoryChange,
 }) => {
   return (
-    <div className="mb-4">
-      <select
-        value={selectedCategory}
-        onChange={(e) => onCategoryChange(e.target.value)}
-        className="border p-2 rounded"
-      >
-        <option value="">All Categories</option>
-        {categories.map((category) => (
-          <option key={category} value={category}>
-            {category}
-          </option>
-        ))}
-      </select>
+
+    <div className="mb-4 float-end">
+      <Select value={selectedCategory} onValueChange={onCategoryChange}>
+        <SelectTrigger className="w-[180px]">
+          <SelectValue placeholder="Category" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="all">All Categories</SelectItem>
+          {categories.map((category) => (
+            <SelectItem key={category} value={category}>
+              {category}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+
     </div>
   );
 };

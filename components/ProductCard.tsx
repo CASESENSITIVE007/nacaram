@@ -1,4 +1,3 @@
-// src/components/ProductCard.tsx
 "use client";
 import Image from "next/image";
 import React from "react";
@@ -19,26 +18,29 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <Card>
+
+    <Card className="border-none">
+
       <CardHeader>
         <Image
           src={product.imageUrl}
           alt={product.name}
-          width={500}
-          height={500}
-          className="w-full h-48 object-cover"
+
+          width={200}
+          height={200}
+          content="fit"
+          className="w-full h-fit object-cover"
         />
       </CardHeader>
       <CardContent>
-        <p className="text-lg font-bold mb-2">{product.name}</p>
-        <p className="text-gray-700 mb-2">{product.description}</p>
-        <p className="text-gray-900 font-bold">${product.price}</p>
+        <p className="text-lg text-center font-bold mb-2">{product.name}</p>
+        <p className="text-gray-700 text-center mb-2">{product.description}</p>
+        <p className="text-gray-900 text-center font-bold">${product.price}</p>
       </CardContent>
-      <CardFooter>
-        <Button className="bg-amber-500 text-white px-4 py-2 rounded">
-          Add to Cart
-        </Button>
-      </CardFooter>
+      {/* <CardFooter>
+        <Button className=" text-white px-4 py-2 rounded">Add to Cart</Button>
+      </CardFooter> */}
+
     </Card>
   );
 };
