@@ -1,4 +1,3 @@
-
 import React from "react";
 import background from "../components/bgimg.jpg";
 
@@ -8,26 +7,33 @@ import {
   TwitterIcon,
   Twitter,
 } from "lucide-react";
+import Link from "next/link";
+import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
 const Footer = () => {
   return (
     <div className="  footer bg-yellow-100  h-2/6 mt-12 mr-0 mb-0 pt-12 pr-0 pb-8  font-extralight ">
       <div className="upper md:block justify-around  text-center  border-b border-white sm:block lg:flex   ">
         <div className="home-div border-t border-white  text-left">
-          <p className=" mt-2 ">Home</p>
-          <p>ABOUT</p>
-          <p>CONTACT</p>
-          <p>WHOLESALE SITE</p>
+          <Link href="/">
+            <FooterLink href="/">Home</FooterLink>
+          </Link>
+          <Link href="/about">
+            <FooterLink href="/about">ABOUT</FooterLink>
+          </Link>
+          <Link href="/contact">
+            <FooterLink href="/contact">CONTACT</FooterLink>
+          </Link>
         </div>
         <div className="privacy border-t border-white text-left">
-          <p className=" mt-2">SHIPPING & RETURNS</p>
-          <p>PRIVACY POLICY</p>
+          <FooterLink href="/shipping">SHIPPING & RETURNS</FooterLink>
+          <FooterLink href="/privacy">PRIVACY POLICY</FooterLink>
         </div>
         <div className="subscribe border-t border-white ">
-          <p className=" mt-2">Subscribe to our newsletter for Nacaram</p>
+          <p className="">Subscribe to our newsletter for Nacaram</p>
           <p>news for promotion</p>
           <form className="mt-10">
             <input
-              className="border-none outline-none  bg-white mt-2  h-10 p-2 "
+              className="border-none outline-none  bg-white  h-10 p-2 "
               type="text"
               placeholder="Enter Email Address"
             />
@@ -35,7 +41,7 @@ const Footer = () => {
           </form>
         </div>
         <div className="aboutus border-t border-white">
-          <p className=" mt-2">ABOUT US</p>
+          <FooterLink href="/about">ABOUT US</FooterLink>
           <br />
           <p>
             Lorem ipsum dolor sit amet crm dolorum t <br />
@@ -66,3 +72,16 @@ const Footer = () => {
 
 export default Footer;
 
+const FooterLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <Link href={href}>
+      <p className="hover:underline underline-offset-4">{children}</p>
+    </Link>
+  );
+};
