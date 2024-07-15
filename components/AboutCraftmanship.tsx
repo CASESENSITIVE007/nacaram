@@ -4,7 +4,9 @@ import { Card, CardContent, CardHeader } from "./ui/card";
 export default function AboutCraftmanship() {
   return (
     <section>
+
       <Card className="bg-gradient-to-br from-[#efe09f] to-accent ">
+
         <CardHeader className="py-10 text-center font-bold text-xl">
           About Our Craftmanship
         </CardHeader>
@@ -16,9 +18,11 @@ export default function AboutCraftmanship() {
               necessitatibus minus maiores. Sit ullam numquam ad, libero
               nesciunt dolores consequatur obcaecati similique ex?
             </span>
+
             <Button className="w-1/3 min-w-fit ">Learn More</Button>
           </div>
           <div className="h-80 w-full justify-self-center mb-4 rounded-lg bg-amber-500"></div>
+
         </CardContent>
       </Card>
     </section>

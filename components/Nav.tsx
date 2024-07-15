@@ -1,6 +1,7 @@
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
 import React, { JSX, SVGProps } from "react";
 import Image from "next/image";
 import {
@@ -13,12 +14,15 @@ import {
 } from "./ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
+
 export default function Nav() {
   return (
     <div className="flex md:flex-col w-full shrink-0 items-center px-4 md:px-6 justify-between gap-2">
       <Sheet>
         <Link href="/" className="mr-6 md:flex">
+
           <Image src="/logo.png" alt="nacaram" width={200} height={200} />
+
           <span className="sr-only">Nacaram</span>
         </Link>
         <SheetTrigger asChild>
@@ -55,7 +59,7 @@ export default function Nav() {
               Products
             </Link>
             <Link
-              href="#"
+              href="/contact"
               className="flex w-full items-center py-2 text-lg font-semibold"
               prefetch={false}
             >
@@ -64,6 +68,7 @@ export default function Nav() {
           </div>
         </SheetContent>
       </Sheet>
+
       <NavigationMenu className="mx-auto hidden md:flex gap-6 ">
         <NavigationMenuList>
           <Link
@@ -127,6 +132,7 @@ export default function Nav() {
           </Link>
         </NavigationMenuList>
       </NavigationMenu>
+
     </div>
   );
 }

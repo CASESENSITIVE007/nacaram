@@ -1,3 +1,4 @@
+
 import React from "react";
 import background from "../components/bgimg.jpg";
 
@@ -64,3 +65,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

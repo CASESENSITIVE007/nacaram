@@ -18,11 +18,14 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
+
     <Card className="border-none">
+
       <CardHeader>
         <Image
           src={product.imageUrl}
           alt={product.name}
+
           width={200}
           height={200}
           content="fit"
@@ -37,6 +40,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {/* <CardFooter>
         <Button className=" text-white px-4 py-2 rounded">Add to Cart</Button>
       </CardFooter> */}
+
     </Card>
   );
 };

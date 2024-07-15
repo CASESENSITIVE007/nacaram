@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   Select,
@@ -6,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+
 
 interface FilterProps {
   categories: string[];
@@ -19,6 +21,7 @@ const Filter: React.FC<FilterProps> = ({
   onCategoryChange,
 }) => {
   return (
+
     <div className="mb-4 float-end">
       <Select value={selectedCategory} onValueChange={onCategoryChange}>
         <SelectTrigger className="w-[180px]">
@@ -33,6 +36,7 @@ const Filter: React.FC<FilterProps> = ({
           ))}
         </SelectContent>
       </Select>
+
     </div>
   );
 };
