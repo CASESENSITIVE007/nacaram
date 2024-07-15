@@ -14,13 +14,11 @@ import {
 } from "./ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
-
 export default function Nav() {
   return (
     <div className="flex md:flex-col w-full shrink-0 items-center px-4 md:px-6 justify-between gap-2">
       <Sheet>
-        <Link href="/" className="mr-6 md:flex">
-
+        <Link href="/" className="mr-6 md:w-auto w-24 md:flex">
           <Image src="/logo.png" alt="nacaram" width={200} height={200} />
 
           <span className="sr-only">Nacaram</span>
@@ -38,29 +36,49 @@ export default function Nav() {
           </Link>
           <div className="grid gap-2 py-6">
             <Link
-              href="#"
-              className="flex w-full items-center py-2 text-lg font-semibold"
+              href="/"
+              className="flex w-full items-center py-2 text-lg font-semibold hover:underline underline-offset-4"
               prefetch={false}
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="flex w-full items-center py-2 text-lg font-semibold"
+              className="flex w-full items-center py-2 text-lg font-semibold hover:underline underline-offset-4"
               prefetch={false}
             >
               About
             </Link>
             <Link
               href="/all-products"
-              className="flex w-full items-center py-2 text-lg font-semibold"
+              className="flex w-full items-center py-2 text-lg font-semibold hover:underline underline-offset-4"
               prefetch={false}
             >
               Products
             </Link>
+            <div className="flex flex-col gap-2 ms-4">
+              <Link
+                href="/shop/Totes"
+                className="hover:underline underline-offset-4"
+              >
+                Totes
+              </Link>
+              <Link
+                href="/shop/Clutches"
+                className="hover:underline underline-offset-4"
+              >
+                Clutches
+              </Link>
+              <Link
+                href="/shop/Satchels"
+                className="hover:underline underline-offset-4"
+              >
+                Satchels
+              </Link>
+            </div>
             <Link
               href="/contact"
-              className="flex w-full items-center py-2 text-lg font-semibold"
+              className="flex w-full items-center py-2 text-lg font-semibold  hover:underline underline-offset-4"
               prefetch={false}
             >
               Contact
@@ -124,7 +142,7 @@ export default function Nav() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <Link
-            href="#"
+            href="/contact"
             prefetch={false}
             className={navigationMenuTriggerStyle()}
           >
@@ -132,7 +150,6 @@ export default function Nav() {
           </Link>
         </NavigationMenuList>
       </NavigationMenu>
-
     </div>
   );
 }

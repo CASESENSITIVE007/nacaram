@@ -13,9 +13,9 @@ const Footer = () => {
   return (
     <div className="  footer bg-yellow-100  h-2/6 mt-12 mr-0 mb-0 pt-12 pr-0 pb-8  font-extralight ">
       <div className="upper md:block justify-around  text-center  border-b border-white sm:block lg:flex   ">
-        <div className="home-div border-t border-white  text-left">
+        <div className="home-div border-t border-white  lg:text-left">
           <Link href="/">
-            <FooterLink href="/">Home</FooterLink>
+            <FooterLink href="/">HOME</FooterLink>
           </Link>
           <Link href="/about">
             <FooterLink href="/about">ABOUT</FooterLink>
@@ -24,7 +24,7 @@ const Footer = () => {
             <FooterLink href="/contact">CONTACT</FooterLink>
           </Link>
         </div>
-        <div className="privacy border-t border-white text-left">
+        <div className="privacy border-t border-white lg:text-left">
           <FooterLink href="/shipping">SHIPPING & RETURNS</FooterLink>
           <FooterLink href="/privacy">PRIVACY POLICY</FooterLink>
         </div>
