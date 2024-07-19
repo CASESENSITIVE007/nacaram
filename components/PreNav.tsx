@@ -9,12 +9,13 @@ import {
   InstagramIcon,
 } from "lucide-react";
 import Link from "next/link";
+import NavSheet from "./NavSheet";
 
 const PreNav: React.FC = () => {
   return (
     <div className="bg-[#efe09f] text-gray-800">
-      <div className="flex justify-between items-center p-4">
-        <div className="flex space-x-4">
+      <div className="flex flex-col items-center justify-between gap-2 p-2 md:flex-row md:gap-4 md:p-4">
+        <div className="hidden space-x-4 md:flex">
           <a
             href="https://facebook.com"
             target="_blank"
@@ -29,25 +30,21 @@ const PreNav: React.FC = () => {
           >
             <InstagramIcon />
           </a>
-          <a
-            href="https://pinterest.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></a>
         </div>
         <div className="text-center">Free Shipping</div>
         <div className="flex space-x-4">
+          <NavSheet />
           <Link href="/search">
-            <SearchIcon className="w-5 h-5" />
+            <SearchIcon className="h-4 w-5" />
           </Link>
           <Link href="/account">
-            <UserIcon className="w-5 h-5" />
+            <UserIcon className="h-4 w-5" />
           </Link>
           <Link href="/">
-            <HomeIcon className="w-5 h-5" />
+            <HomeIcon className="h-4 w-5" />
           </Link>
           <Link href="/cart">
-            <ShoppingCartIcon className="w-5 h-5" />
+            <ShoppingCartIcon className="h-4 w-5" />
           </Link>
         </div>
       </div>

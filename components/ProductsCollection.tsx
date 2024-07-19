@@ -15,19 +15,23 @@ const images = [
 
 export default function ProductsCollection() {
   return (
-    <section className="flex flex-col mx-6">
-      <div className="h-5 border-b-2 border-zinc-200 text-2xl text-center my-10">
+    <section className="mx-6 flex flex-col">
+      <div className="my-10 h-5 border-b-2 border-zinc-200 text-center text-2xl">
         <span className="bg-white px-5 font-serif font-semibold">
           Collections
         </span>
       </div>
-      <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 md:grid-cols-3 mx-6">
+      <div className="mx-6 flex flex-wrap justify-center gap-4">
+        {/* grid-cols-2 justify-center gap-8 md:grid-cols-3 lg:grid-cols-3 */}
         {images.map((image) => (
-          <Card className=" border-none" key={image.id}>
-            <CardContent className="p-0 h-500">
+          <Card
+            className="w-full shrink-0 basis-[30%] border-none"
+            key={image.id}
+          >
+            <CardContent className="h-500 p-0">
               <Image src={image.src} width={500} height={500} alt={image.alt} />
             </CardContent>
-            <CardFooter className="p-0 py-2 justify-center font-bold text-xs ">
+            <CardFooter className="justify-center p-0 py-2 text-xs font-bold">
               Sale Bags
             </CardFooter>
           </Card>

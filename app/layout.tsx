@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -24,12 +23,12 @@ export default function RootLayout({
       <body
         className={cn("relative h-full font-sans antialiased", inter.className)}
       >
-        <main className="relative flex flex-col min-h-screen overflow-hidden">
+        <main className="relative flex min-h-screen flex-col overflow-clip">
           <header>
             <PreNav />
             <Nav />
           </header>
-          <div className="flex-grow flex-1">{children}</div>
+          <div className="flex-1 flex-grow">{children}</div>
           <Footer />
         </main>
       </body>

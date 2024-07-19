@@ -11,33 +11,27 @@ import Link from "next/link";
 import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
 const Footer = () => {
   return (
-    <div className="  footer bg-yellow-100  h-2/6 mt-12 mr-0 mb-0 pt-12 pr-0 pb-8  font-extralight ">
-      <div className="upper md:block justify-around  text-center  border-b border-white sm:block lg:flex   ">
-        <div className="home-div border-t border-white  lg:text-left">
-          <Link href="/">
-            <FooterLink href="/">HOME</FooterLink>
-          </Link>
-          <Link href="/about">
-            <FooterLink href="/about">ABOUT</FooterLink>
-          </Link>
-          <Link href="/contact">
-            <FooterLink href="/contact">CONTACT</FooterLink>
-          </Link>
+    <div className="footer mb-0 mr-0 mt-12 h-2/6 bg-yellow-100 pb-8 pr-0 pt-12 font-extralight">
+      <div className="upper justify-around border-b border-white text-center sm:block md:block lg:flex">
+        <div className="home-div border-t border-white lg:text-left">
+          <FooterLink href="/">HOME</FooterLink>
+          <FooterLink href="/about">ABOUT</FooterLink>
+          <FooterLink href="/contact">CONTACT</FooterLink>
         </div>
         <div className="privacy border-t border-white lg:text-left">
           <FooterLink href="/shipping">SHIPPING & RETURNS</FooterLink>
           <FooterLink href="/privacy">PRIVACY POLICY</FooterLink>
         </div>
-        <div className="subscribe border-t border-white ">
+        <div className="subscribe border-t border-white">
           <p className="">Subscribe to our newsletter for Nacaram</p>
           <p>news for promotion</p>
           <form className="mt-10">
             <input
-              className="border-none outline-none  bg-white  h-10 p-2 "
+              className="h-10 border-none bg-white p-2 outline-none"
               type="text"
               placeholder="Enter Email Address"
             />
-            <button className=" bg-black text-white h-10 w-12">Join</button>
+            <button className="h-10 w-12 bg-black text-white">Join</button>
           </form>
         </div>
         <div className="aboutus border-t border-white">
@@ -51,8 +45,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="lower  ">
-        <div className="socialIcons flex justify-center gap-4 mt-8 mr-3.5 mb-5 pt-8 pr-0 pb-0  ">
+      <div className="lower">
+        <div className="socialIcons mb-5 mr-3.5 mt-8 flex justify-center gap-4 pb-0 pr-0 pt-8">
           <div className="insta">
             <InstagramIcon />
           </div>
@@ -64,7 +58,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-center m-8  ">COPYRIGHT @ 2024 Nacaram</p>
+        <p className="m-8 text-center">COPYRIGHT @ 2024 Nacaram</p>
       </div>
     </div>
   );
@@ -81,7 +75,7 @@ const FooterLink = ({
 }) => {
   return (
     <Link href={href}>
-      <p className="hover:underline underline-offset-4">{children}</p>
+      <p className="underline-offset-4 hover:underline">{children}</p>
     </Link>
   );
 };

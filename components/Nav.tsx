@@ -16,78 +16,14 @@ import { cn } from "@/lib/utils";
 
 export default function Nav() {
   return (
-    <div className="flex md:flex-col w-full shrink-0 items-center px-4 md:px-6 justify-between gap-2">
-      <Sheet>
-        <Link href="/" className="mr-6 md:w-auto w-24 md:flex">
-          <Image src="/logo.png" alt="nacaram" width={200} height={200} />
+    <div className="flex w-full shrink-0 flex-col items-center justify-between gap-2 px-4">
+      <Link href="/" className="w-32 md:flex md:w-auto">
+        <Image src="/logo.png" alt="nacaram" width={200} height={200} />
 
-          <span className="sr-only">Nacaram</span>
-        </Link>
-        <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="md:hidden my-6">
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left">
-          <Link href="/" className="mr-6  md:flex" prefetch={false}>
-            <Image src="/logo.png" alt="nacaram" width={100} height={100} />
-            <span className="sr-only">Nacaram</span>
-          </Link>
-          <div className="grid gap-2 py-6">
-            <Link
-              href="/"
-              className="flex w-full items-center py-2 text-lg font-semibold hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="flex w-full items-center py-2 text-lg font-semibold hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              About
-            </Link>
-            <Link
-              href="/all-products"
-              className="flex w-full items-center py-2 text-lg font-semibold hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Products
-            </Link>
-            <div className="flex flex-col gap-2 ms-4">
-              <Link
-                href="/shop/Totes"
-                className="hover:underline underline-offset-4"
-              >
-                Totes
-              </Link>
-              <Link
-                href="/shop/Clutches"
-                className="hover:underline underline-offset-4"
-              >
-                Clutches
-              </Link>
-              <Link
-                href="/shop/Satchels"
-                className="hover:underline underline-offset-4"
-              >
-                Satchels
-              </Link>
-            </div>
-            <Link
-              href="/contact"
-              className="flex w-full items-center py-2 text-lg font-semibold  hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Contact
-            </Link>
-          </div>
-        </SheetContent>
-      </Sheet>
+        <span className="sr-only">Nacaram</span>
+      </Link>
 
-      <NavigationMenu className="mx-auto hidden md:flex gap-6 ">
+      <NavigationMenu className="mx-auto hidden gap-6 md:flex">
         <NavigationMenuList>
           <Link
             href="/"
@@ -108,7 +44,7 @@ export default function Nav() {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Products</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] grid-cols-1">
+              <ul className="grid grid-cols-1 gap-3 p-6 md:w-[400px] lg:w-[500px]">
                 {/* <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <Link
@@ -186,7 +122,7 @@ const ListItem = React.forwardRef<
         ref={ref}
         className={cn(
           "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-          className
+          className,
         )}
         {...props}
       >
