@@ -1,31 +1,39 @@
-import { useState } from "react";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
+import type { SetStateAction, Dispatch } from "react";
 
-const QuantitySelector = () => {
-  const [quantity, setQuantity] = useState(1);
-
+const QuantitySelector = ({
+  quantity,
+  setQuantity,
+}: {
+  quantity: number;
+  setQuantity: Dispatch<SetStateAction<number>>;
+}) => {
   const increaseQuantity = () => setQuantity(quantity + 1);
   const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 
   return (
-    <div className="flex items-center">
-      <button
+    <div className="flex items-center gap-2">
+      <Button
+        className="border-l-0"
+        variant={"outline"}
         onClick={decreaseQuantity}
-        className="bg-gray-200 text-gray-700 px-2 py-1 rounded-l"
       >
         -
-      </button>
-      <input
-        type="number"
+      </Button>
+      <Input
+        // type="number"
         value={quantity}
         readOnly
-        className="w-12 text-center border-t border-b border-gray-300"
+        className="w-12 border-b border-t border-gray-300 text-center"
       />
-      <button
+      <Button
+        className="border-r-0"
+        variant={"outline"}
         onClick={increaseQuantity}
-        className="bg-gray-200 text-gray-700 px-2 py-1 rounded-r"
       >
         +
-      </button>
+      </Button>
     </div>
   );
 };

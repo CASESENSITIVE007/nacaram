@@ -1,22 +1,45 @@
+import { cn } from "@/lib/utils";
+import React from "react";
+import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image.js";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 interface ProductImageGalleryProps {
+  className?: string;
   images: string[];
 }
 
-const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
+const ProductImageGallery = ({
+  images,
+  className,
+}: ProductImageGalleryProps) => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnMouseEnter: true }),
+  );
+
   return (
-    <div>
-      <img src={images[0]} alt="Product Image" className="w-full mb-4" />
-      <div className="flex space-x-2">
+    <Carousel
+      opts={{ loop: true, align: "center" }}
+      plugins={[plugin.current]}
+      className={cn(className, "w-full")}
+    >
+      <CarouselContent>
         {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Thumbnail ${index}`}
-            className="w-16 h-16 object-cover"
-          />
+          <CarouselItem key={index}>
+            <div className="flex justify-center p-1">
+              <Image src={image} width={500} height={500} alt="logo" />
+            </div>
+          </CarouselItem>
         ))}
-      </div>
-    </div>
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   );
 };
 

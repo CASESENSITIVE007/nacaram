@@ -1,4 +1,4 @@
-interface Product {
+export type Product = {
   id: string;
   name: string;
   price: number;
@@ -65,4 +65,8 @@ const products: Product[] = [
 
 export const fetchProductById = async (id: string) => {
   return products.find(product => product.id === id) || null;
+};
+
+export const fetchAllProducts = async (): Promise<Product[]> => {
+  return products;
 };

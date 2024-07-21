@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { fetchProductById } from "@/services/api";
-import ProductDetail from "@/components/ProductDetail";
+import ProductDetail from "../../../components/ProductDetail";
 
-const Page = ({ params }: { params: { id: string } }) => {
+const ProductPage = ({ params }: { params: { id: string } }) => {
   const [product, setProduct] = useState(null);
   const { id } = params;
   useEffect(() => {
@@ -17,4 +17,4 @@ const Page = ({ params }: { params: { id: string } }) => {
   return <ProductDetail product={product} />;
 };
 
-export default Page;
+export default ProductPage;

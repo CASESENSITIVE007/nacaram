@@ -14,7 +14,11 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-export default function defaultProductCarousel(props: any) {
+export default function defaultProductCarousel({
+  className,
+}: {
+  className: string;
+}) {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnMouseEnter: true }),
   );
@@ -23,12 +27,12 @@ export default function defaultProductCarousel(props: any) {
     <Carousel
       opts={{ loop: true, align: "center" }}
       plugins={[plugin.current]}
-      className={cn(props.className, "w-full")}
+      className={cn(className, "w-full")}
     >
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
-            <div className="p-1 flex justify-center">
+            <div className="flex justify-center p-1">
               <Image src={carimage} alt="logo" />
             </div>
           </CarouselItem>

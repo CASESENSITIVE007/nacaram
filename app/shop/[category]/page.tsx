@@ -1,5 +1,6 @@
 import ProductCard from "@/components/ProductCard";
 import products, { Product } from "@/lib/products";
+import Link from "next/link";
 
 export default function Page({ params }: { params: { category: string } }) {
   const { category } = params;
@@ -9,14 +10,16 @@ export default function Page({ params }: { params: { category: string } }) {
     : products;
 
   return (
-    <div className="container mx-auto md:px-20 px-4 py-8">
-      <h1 className="text-3xl text-center font-semibold mb-6">
+    <div className="container mx-auto px-4 py-8 md:px-20">
+      <h1 className="mb-6 text-center text-3xl font-semibold">
         {category} Bags
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {filteredProducts.map((product: Product) => (
-          <ProductCard key={product.id} product={product} />
+          <Link href="/">
+            <ProductCard key={product.id} product={product} />
+          </Link>
         ))}
       </div>
     </div>
