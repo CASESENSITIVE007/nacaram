@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Select,
@@ -7,7 +6,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-
 
 interface FilterProps {
   categories: string[];
@@ -20,12 +18,18 @@ const Filter: React.FC<FilterProps> = ({
   selectedCategory,
   onCategoryChange,
 }) => {
-  return (
+  const handleSelect = (val: string) => {
+    if (val === "all") {
+      val = "";
+    }
+    onCategoryChange(val);
+  };
 
-    <div className="mb-4 float-end">
-      <Select value={selectedCategory} onValueChange={onCategoryChange}>
+  return (
+    <div className="float-end mb-4">
+      <Select value={selectedCategory} onValueChange={handleSelect}>
         <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Category" />
+          <SelectValue placeholder="All Categories" />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="all">All Categories</SelectItem>
@@ -36,7 +40,6 @@ const Filter: React.FC<FilterProps> = ({
           ))}
         </SelectContent>
       </Select>
-
     </div>
   );
 };

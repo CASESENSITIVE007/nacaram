@@ -33,14 +33,6 @@ export default function Nav() {
             Home
           </Link>
 
-          <Link
-            href="/about"
-            prefetch={false}
-            className={navigationMenuTriggerStyle()}
-          >
-            About
-          </Link>
-
           <NavigationMenuItem>
             <NavigationMenuTrigger>Products</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -77,6 +69,15 @@ export default function Nav() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
+          <Link
+            href="/about"
+            prefetch={false}
+            className={navigationMenuTriggerStyle()}
+          >
+            About
+          </Link>
+
           <Link
             href="/contact"
             prefetch={false}

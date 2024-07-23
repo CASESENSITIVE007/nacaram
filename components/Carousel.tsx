@@ -17,7 +17,7 @@ import Image from "next/image";
 export default function defaultProductCarousel({
   className,
 }: {
-  className: string;
+  className?: string;
 }) {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnMouseEnter: true }),

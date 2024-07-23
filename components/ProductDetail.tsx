@@ -1,3 +1,4 @@
+"use client";
 import { FacebookIcon, TwitterIcon } from "lucide-react";
 import ProductImageGallery from "./ProductImageGallery";
 import QuantitySelector from "./QuantitySelector";

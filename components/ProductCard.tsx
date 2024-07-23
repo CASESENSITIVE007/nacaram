@@ -1,46 +1,29 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
-import { Button } from "./ui/button";
+import type { Product } from "@/types/productType";
 
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  imageUrl: string;
-}
-
-interface ProductCardProps {
-  product: Product;
-}
-
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   return (
-
     <Card className="border-none">
-
       <CardHeader>
         <Image
-          src={product.imageUrl}
+          src={product.imageUrl[0]}
           alt={product.name}
-
           width={200}
           height={200}
           content="fit"
-          className="w-full h-fit object-cover"
+          className="h-fit w-full object-cover"
         />
       </CardHeader>
       <CardContent>
-        <p className="text-lg text-center font-bold mb-2">{product.name}</p>
-        <p className="text-gray-700 text-center mb-2">{product.description}</p>
-        <p className="text-gray-900 text-center font-bold">${product.price}</p>
+        <p className="mb-2 text-center text-lg font-bold">{product.name}</p>
+        <p className="mb-2 text-center text-gray-700">{product.description}</p>
+        <p className="text-center font-bold text-gray-900">${product.price}</p>
       </CardContent>
       {/* <CardFooter>
         <Button className=" text-white px-4 py-2 rounded">Add to Cart</Button>
       </CardFooter> */}
-
     </Card>
   );
 };
