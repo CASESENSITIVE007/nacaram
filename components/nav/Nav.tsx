@@ -54,7 +54,7 @@ export default function Nav() {
                     </Link>
                   </NavigationMenuLink>
                 </li> */}
-                <ListItem href="/shop/all" title="All Products">
+                <ListItem href="/all-products" title="All Products">
                   Take a look at all our products.
                 </ListItem>
                 <ListItem href="/shop/Totes" title="Totes">
