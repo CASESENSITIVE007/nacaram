@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import NavSheet from "./NavSheet";
+import Cart from "../CartSheet";
 
 const PreNav: React.FC = () => {
   return (
@@ -32,7 +33,7 @@ const PreNav: React.FC = () => {
           </a>
         </div>
         <div className="text-center">Free Shipping</div>
-        <div className="flex space-x-4">
+        <div className="flex items-center space-x-4">
           <NavSheet />
           <Link href="/search">
             <SearchIcon className="h-4 w-5" />
@@ -43,9 +44,9 @@ const PreNav: React.FC = () => {
           <Link href="/">
             <HomeIcon className="h-4 w-5" />
           </Link>
-          <Link href="/cart">
-            <ShoppingCartIcon className="h-4 w-5" />
-          </Link>
+
+          {/* <ShoppingCartIcon className="h-4 w-5" /> */}
+          <Cart />
         </div>
       </div>
     </div>

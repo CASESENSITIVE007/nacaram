@@ -1,8 +1,8 @@
-import AboutCraftmanship from "@/components/AboutCraftmanship";
+import AboutCraftmanship from "@/components/home/AboutCraftmanship";
 import Carousel from "@/components/Carousel";
-import MustHaves from "@/components/MustHaves";
-import ProductsCollection from "@/components/ProductsCollection";
-import ProductsShowcase from "@/components/ProductsShowcase";
+import MustHaves from "@/components/home/MustHaves";
+import HomeCollection from "@/components/home/HomeCollection";
+import ProductsShowcase from "@/components/product_related/ProductsShowcase";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         <MustHaves />
         <AboutCraftmanship />
         <ProductsShowcase />
-        <ProductsCollection />
+        <HomeCollection />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import type { Product } from "@/types/productType";
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {

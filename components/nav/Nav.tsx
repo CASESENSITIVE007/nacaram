@@ -11,7 +11,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "./ui/navigation-menu";
+} from "../ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
 export default function Nav() {
@@ -54,7 +54,7 @@ export default function Nav() {
                     </Link>
                   </NavigationMenuLink>
                 </li> */}
-                <ListItem href="/all-products" title="All Products">
+                <ListItem href="/shop/all" title="All Products">
                   Take a look at all our products.
                 </ListItem>
                 <ListItem href="/shop/Totes" title="Totes">

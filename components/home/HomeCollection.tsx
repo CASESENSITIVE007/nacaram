@@ -1,5 +1,5 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import image from "../public/onsale.png";
+import image from "@/public/onsale.png";
 import Image from "next/image";
 
 const images = [
@@ -13,7 +13,7 @@ const images = [
   { id: 8, src: image, alt: "image" },
 ];
 
-export default function ProductsCollection() {
+export default function HomeCollection() {
   return (
     <section className="mx-6 flex flex-col">
       <div className="my-10 h-5 border-b-2 border-zinc-200 text-center text-2xl">

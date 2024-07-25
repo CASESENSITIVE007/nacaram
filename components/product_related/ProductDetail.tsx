@@ -1,9 +1,9 @@
 "use client";
 import { FacebookIcon, TwitterIcon } from "lucide-react";
 import ProductImageGallery from "./ProductImageGallery";
-import QuantitySelector from "./QuantitySelector";
+import QuantitySelector from "../QuantitySelector";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { useState } from "react";
 
 interface Product {

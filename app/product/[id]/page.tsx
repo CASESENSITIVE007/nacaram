@@ -1,4 +1,4 @@
-import ProductDetail from "../../../components/ProductDetail";
+import ProductDetail from "../../../components/product_related/ProductDetail";
 
 const ProductPage = async ({ params }: { params: { id: string } }) => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;

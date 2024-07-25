@@ -5,12 +5,11 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card";
-import image from "../public/onsale.png";
+import image from "@/public/onsale.png";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 import Link from "next/link";
-import { title } from "process";
 
 const images = [
   {
@@ -28,13 +27,12 @@ const images = [
     href: "/shop/Satchels",
     title: "Satchels",
   },
-
 ];
 
 export default function MustHaves() {
   return (
-    <section className="flex flex-col md:flex-row gap-4 mx-6">
-      <Card className="w-full flex justify-between items-center gap-2 md:flex-col md:items-start md:justify-center basis-1/3 border-none ">
+    <section className="mx-6 flex flex-col gap-4 md:flex-row">
+      <Card className="flex w-full basis-1/3 items-center justify-between gap-2 border-none md:flex-col md:items-start md:justify-center">
         <div className="flex flex-col">
           <span className="text-xl font-bold">Must Haves</span>
           <span className="text-sm text-muted-foreground">
@@ -43,14 +41,13 @@ export default function MustHaves() {
         </div>
         <Button className="max-w-fit bg-primary">Shop Now</Button>
       </Card>
-      <div className="grid justify-items-center grid-cols-2 gap-2 md:grid-cols-3 ">
+      <div className="grid grid-cols-2 justify-items-center gap-2 md:grid-cols-3">
         {images.map((image) => (
           <Card className=" " key={image.id}>
-            <CardContent className="p-0 h-500">
+            <CardContent className="h-500 p-0">
               <Image src={image.src} width={500} height={500} alt={image.alt} />
             </CardContent>
-            <CardFooter className="p-4  flex-col items-start gap-4">
-
+            <CardFooter className="flex-col items-start gap-4 p-4">
               <span className="text-xl font-bold">{image.title}</span>
               <span className="text-sm text-muted-foreground">
                 Bestsellers among our collection
@@ -58,7 +55,6 @@ export default function MustHaves() {
               <Link href={image.href}>
                 <Button>Shop Now</Button>
               </Link>
-
             </CardFooter>
           </Card>
         ))}

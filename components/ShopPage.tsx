@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProductCard from "./ProductCard";
+import ProductCard from "./product_related/ProductCard";
 import type { Product } from "@/types/productType";
 
 export const ShopPage = ({ products }: { products: Product[] }) => {

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button, buttonVariants } from "./ui/button";
-import { Card, CardContent, CardHeader } from "./ui/card";
+import { Button, buttonVariants } from "../ui/button";
+import { Card, CardContent, CardHeader } from "../ui/card";
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
