@@ -1,7 +1,8 @@
 import { ShopPage } from "@/components/ShopPage";
 
 export default async function AllProductsPage() {
-  const res = await fetch("http://localhost:3000/api/products");
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`${baseUrl ? baseUrl : ""}/api/products`);
   const products = await res.json();
 
   return <ShopPage products={products} />;

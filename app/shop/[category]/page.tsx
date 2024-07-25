@@ -7,8 +7,9 @@ export default async function Shop({
   params: { category: string };
 }) {
   const categ = params.category;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const res = await fetch(
-    `http://localhost:3000/api/products?category=${categ == "all" ? "" : categ}`,
+    `${baseUrl ? baseUrl : ""}/api/products?category=${categ == "all" ? "" : categ}`,
     { cache: "no-store" },
   );
   const products: Product[] = await res.json();
