@@ -12,9 +12,5 @@ export default async function AllProductsPage() {
   // const products = await res.json();
 
   const products = await getProducts();
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ShopPage products={products} />
-    </Suspense>
-  );
+  return <ShopPage products={products} />;
 }

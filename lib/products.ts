@@ -116,7 +116,7 @@ const products: Product[] = [
 
 
 export async function getProducts(category?: string) : Promise<Product[]>  {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 200));
   let filteredProducts = products;
 
   if (category) {
@@ -127,6 +127,6 @@ export async function getProducts(category?: string) : Promise<Product[]>  {
 }
 
 export async function getProduct(id: string) : Promise<Product> {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 200));
   return products.find((product) => product.id === id) as Product;
 }
