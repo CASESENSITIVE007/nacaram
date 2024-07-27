@@ -25,11 +25,17 @@ export default function HomeCollection() {
         {/* grid-cols-2 justify-center gap-8 md:grid-cols-3 lg:grid-cols-3 */}
         {images.map((image) => (
           <Card
-            className="w-full shrink-0 basis-[30%] border-none"
+            className="w-full shrink-0 border-none md:basis-[30%] lg:basis-[22%]"
             key={image.id}
           >
             <CardContent className="h-500 p-0">
-              <Image src={image.src} width={500} height={500} alt={image.alt} />
+              <Image
+                className="mx-auto"
+                src={image.src}
+                width={500}
+                height={500}
+                alt={image.alt}
+              />
             </CardContent>
             <CardFooter className="justify-center p-0 py-2 text-xs font-bold">
               Sale Bags

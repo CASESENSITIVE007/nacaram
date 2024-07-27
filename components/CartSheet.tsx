@@ -56,12 +56,12 @@ const Cart = () => {
 
   return (
     <Sheet>
-      <SheetTrigger className="group flex items-center">
+      <SheetTrigger className="group flex items-center underline-offset-4 hover:underline">
         <ShoppingCart
           aria-hidden="true"
-          className="h-4 w-5 flex-shrink-0 underline-offset-4 hover:underline group-hover:underline"
+          className="h-4 w-5 flex-shrink-0 group-hover:text-foreground"
         />
-        <span className="ml-2 text-sm font-medium group-hover:underline">
+        <span className="text-sm font-medium group-hover:text-foreground">
           {isMounted ? itemCount : 0}
         </span>
       </SheetTrigger>
@@ -98,7 +98,7 @@ const Cart = () => {
               <SheetFooter>
                 <SheetTrigger asChild>
                   <Link
-                    href="/cart"
+                    href="/test"
                     className={buttonVariants({
                       className: "w-full",
                     })}

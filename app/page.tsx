@@ -1,17 +1,19 @@
 import AboutCraftmanship from "@/components/home/AboutCraftmanship";
-import Carousel from "@/components/Carousel";
+import ImageSlider from "@/components/ImageSlider";
 import MustHaves from "@/components/home/MustHaves";
 import HomeCollection from "@/components/home/HomeCollection";
-import ProductsShowcase from "@/components/product_related/ProductsShowcase";
+import HomeFeatured from "@/components/home/HomeFeatured";
+
+const images = ["/slide.png", "/slide.png", "/slide.png"];
 
 export default function Home() {
   return (
     <div className="">
-      <Carousel />
+      <ImageSlider images={images} />
       <div className="mt-4 flex flex-col justify-center md:px-8 lg:mx-auto lg:max-w-[1400]">
         <MustHaves />
         <AboutCraftmanship />
-        <ProductsShowcase />
+        <HomeFeatured />
         <HomeCollection />
       </div>
     </div>

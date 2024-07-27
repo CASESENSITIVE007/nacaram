@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import carimage from "../public/slide.png";
 import Autoplay from "embla-carousel-autoplay";
 import { cn } from "@/lib/utils";
 
@@ -14,11 +13,12 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-export default function defaultProductCarousel({
-  className,
-}: {
+interface ImageSliderProps {
   className?: string;
-}) {
+  images: string[];
+}
+
+export default function ImageSlider({ className, images }: ImageSliderProps) {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnMouseEnter: true }),
   );
@@ -27,19 +27,25 @@ export default function defaultProductCarousel({
     <Carousel
       opts={{ loop: true, align: "center" }}
       plugins={[plugin.current]}
-      className={cn(className, "w-full")}
+      className={cn(className, "group w-full overflow-clip")}
     >
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
+        {images.map((image, index) => (
           <CarouselItem key={index}>
             <div className="flex justify-center p-1">
-              <Image src={carimage} alt="logo" />
+              <Image
+                className="h-full w-full"
+                src={image}
+                width={500}
+                height={500}
+                alt="logo"
+              />
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="transition-transform group-hover:translate-x-14" />
+      <CarouselNext className="transition-transform group-hover:-translate-x-14" />
     </Carousel>
   );
 }

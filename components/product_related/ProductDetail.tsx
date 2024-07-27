@@ -5,6 +5,7 @@ import QuantitySelector from "../QuantitySelector";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { useState } from "react";
+import ImageSlider from "../ImageSlider";
 
 interface Product {
   id: string;
@@ -27,7 +28,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
       <div className="flex flex-col md:flex-row">
         {/* Carousel  */}
         <div className="w-full md:w-1/2">
-          <ProductImageGallery images={product.imageUrl} />
+          <ImageSlider images={product.imageUrl} />
         </div>
 
         <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left">

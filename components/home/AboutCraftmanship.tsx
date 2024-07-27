@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { Button, buttonVariants } from "../ui/button";
 import { Card, CardContent, CardHeader } from "../ui/card";
-import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import craft from "@/public/craftman.jpeg";
 
 export default function AboutCraftmanship() {
   return (
     <section>
-      <Card className="bg-gradient-to-br from-[#efe09f] to-accent">
+      <Card className="bg-[#efe09f]">
         <CardHeader className="py-10 text-center text-xl font-bold">
           About Our Craftmanship
         </CardHeader>
@@ -29,7 +30,9 @@ export default function AboutCraftmanship() {
               Learn More
             </Link>
           </div>
-          <div className="mb-4 h-80 w-full justify-self-center rounded-lg bg-amber-500"></div>
+          <div className="mb-4 w-full justify-self-center overflow-clip rounded-lg bg-amber-500">
+            <Image src={craft} alt="craftman" className="object-cover" />
+          </div>
         </CardContent>
       </Card>
     </section>
