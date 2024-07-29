@@ -8,7 +8,7 @@ const images = ["/slide.png", "/slide.png", "/slide.png"];
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <ImageSlider images={images} />
       <div className="mt-4 flex flex-col justify-center md:px-8 lg:mx-auto lg:max-w-[1400]">
         <MustHaves />

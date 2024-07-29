@@ -32,7 +32,7 @@ export default function ImageSlider({ className, images }: ImageSliderProps) {
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
-            <div className="flex justify-center p-1">
+            <div className="flex w-full justify-center p-1">
               <Image
                 className="h-full w-full"
                 src={image}

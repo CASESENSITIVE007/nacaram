@@ -14,7 +14,7 @@ import Cart from "../CartSheet";
 
 const PreNav: React.FC = () => {
   return (
-    <div className="bg-[#efe09f] text-gray-800">
+    <div className="bg-header">
       <div className="flex flex-col items-center justify-between gap-2 p-2 md:flex-row md:gap-4 md:p-4">
         <div className="hidden space-x-4 md:flex">
           <a

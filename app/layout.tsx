@@ -28,7 +28,7 @@ export default function RootLayout({
             <PreNav />
             <Nav />
           </header>
-          <div className="flex flex-1 flex-grow">{children}</div>
+          <div className="flex-1 flex-grow">{children}</div>
           <Footer />
         </main>
       </body>

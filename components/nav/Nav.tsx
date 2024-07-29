@@ -18,7 +18,7 @@ export default function Nav() {
   return (
     <div className="flex w-full shrink-0 flex-col items-center justify-between gap-2 px-4">
       <Link href="/" className="w-32 md:flex md:w-auto">
-        <Image src="/logo.png" alt="nacaram" width={200} height={200} />
+        <Image src="/logo_alt1.png" alt="nacaram" width={250} height={250} />
 
         <span className="sr-only">Nacaram</span>
       </Link>

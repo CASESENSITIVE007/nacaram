@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const images = [
   { id: 1, src: image, alt: "image", href: "/product/1" },
-  { id: 1, src: image, alt: "image", href: "/product/2" },
-  { id: 1, src: image, alt: "image", href: "/product/3" },
+  { id: 2, src: image, alt: "image", href: "/product/2" },
+  { id: 3, src: image, alt: "image", href: "/product/3" },
 ];
 
 export default function HomeFeatured() {
