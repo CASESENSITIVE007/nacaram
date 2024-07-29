@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProductCard from "./product_related/ProductCard";
+import ShopProductCard from "./product_related/ShopProductCard";
 import type { Product } from "@/types/productType";
 
 export const ShopPage = ({ products }: { products: Product[] }) => {
@@ -14,7 +14,7 @@ export const ShopPage = ({ products }: { products: Product[] }) => {
             as={`/product/${product.id}`}
             key={product.id}
           >
-            <ProductCard key={product.id} product={product} />
+            <ShopProductCard key={product.id} product={product} />
           </Link>
         ))}
       </div>

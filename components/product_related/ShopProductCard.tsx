@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import type { Product } from "@/types/productType";
 
-const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
+const ShopProductCard: React.FC<{ product: Product }> = ({ product }) => {
   return (
     <Card className="border-none">
       <CardHeader>
@@ -28,4 +28,4 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default ShopProductCard;

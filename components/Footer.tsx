@@ -8,21 +8,20 @@ import {
   Twitter,
 } from "lucide-react";
 import Link from "next/link";
-import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
 const Footer = () => {
   return (
-    <div className="footer mb-0 mr-0 mt-12 h-2/6 bg-yellow-100 pb-8 pr-0 pt-12 font-extralight">
-      <div className="upper justify-around border-b border-white text-center sm:block md:block lg:flex">
-        <div className="home-div border-t border-white lg:text-left">
+    <div className="footer bg-header mb-0 mr-0 mt-12 h-2/6 pb-8 pr-0 pt-12 font-extralight">
+      <div className="upper justify-around border-b text-center sm:block md:block lg:flex">
+        <div className="home-div border-t lg:text-left">
           <FooterLink href="/">HOME</FooterLink>
           <FooterLink href="/about">ABOUT</FooterLink>
           <FooterLink href="/contact">CONTACT</FooterLink>
         </div>
-        <div className="privacy border-t border-white lg:text-left">
+        <div className="privacy border-t lg:text-left">
           <FooterLink href="/shipping">SHIPPING & RETURNS</FooterLink>
           <FooterLink href="/privacy">PRIVACY POLICY</FooterLink>
         </div>
-        <div className="subscribe border-t border-white">
+        <div className="subscribe border-t">
           <p className="">Subscribe to our newsletter for Nacaram</p>
           <p>news for promotion</p>
           <form className="mt-10">
@@ -34,7 +33,7 @@ const Footer = () => {
             <button className="h-10 w-12 bg-black text-white">Join</button>
           </form>
         </div>
-        <div className="aboutus border-t border-white">
+        <div className="aboutus border-t">
           <FooterLink href="/about">ABOUT US</FooterLink>
           <br />
           <p>

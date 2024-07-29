@@ -8,7 +8,7 @@ import craft from "@/public/craftman.jpeg";
 export default function AboutCraftmanship() {
   return (
     <section>
-      <Card className="bg-[#efe09f]">
+      <Card className="bg-accent">
         <CardHeader className="py-10 text-center text-xl font-bold">
           About Our Craftmanship
         </CardHeader>

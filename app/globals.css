@@ -16,7 +16,7 @@
       --secondary-foreground: 240 5.9% 10%;
       --muted: hsl(240 4.8% 95.9%);
       --muted-foreground: 240 3.8% 46.1%;
-      --accent: 240 4.8% 95.9%;
+      --accent: #f4f4f5 ;
       --accent-foreground: 240 5.9% 10%;
       --destructive: 0 84.2% 60.2%;
       --destructive-foreground: 0 0% 98%;
@@ -25,6 +25,8 @@
       --ring: 346.8 77.2% 49.8%;
       --radius: 0.5rem;
       --header: #efe09f;
+      --buy-button: #3b0764;
+      --add-to-button: #5656b9;
     }
   
     .dark {

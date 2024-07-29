@@ -13,6 +13,10 @@ const useColor = () => {
   const [foreground, setForeground] = useState("");
   const [card, setCard] = useState("");
   const [cardForeground, setCardForeground] = useState("");
+  const [accent, setAccent] = useState("");
+  const [header, setHeader] = useState("");
+  const [buyButton, setBuyButton] = useState("");
+  const [addToButton, setAddToButton] = useState("");
 
   useEffect(() => {
     setPrimary(getInitialValue("--primary"));
@@ -21,6 +25,10 @@ const useColor = () => {
     setForeground(getInitialValue("--foreground"));
     setCard(getInitialValue("--card"));
     setCardForeground(getInitialValue("--card-foreground"));
+    setAccent(getInitialValue("--accent"));
+    setHeader(getInitialValue("--header"));
+    setBuyButton(getInitialValue("--buy-button"));
+    setAddToButton(getInitialValue("--add-to-button"));
   }, []);
 
   const handlePrimaryChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -56,6 +64,29 @@ const useColor = () => {
     setCardForeground(e.target.value);
   };
 
+  const handleAccentChange = (e: ChangeEvent<HTMLInputElement>) => {
+    document.documentElement.style.setProperty("--accent", e.target.value);
+    setAccent(e.target.value);
+  };
+
+  const handleHeaderChange = (e: ChangeEvent<HTMLInputElement>) => {
+    document.documentElement.style.setProperty("--header", e.target.value);
+    setHeader(e.target.value);
+  };
+
+  const handleBuyButtonChange = (e: ChangeEvent<HTMLInputElement>) => {
+    document.documentElement.style.setProperty("--buy-button", e.target.value);
+    setBuyButton(e.target.value);
+  };
+
+  const handleAddToButtonChange = (e: ChangeEvent<HTMLInputElement>) => {
+    document.documentElement.style.setProperty(
+      "--add-to-button",
+      e.target.value,
+    );
+    setAddToButton(e.target.value);
+  };
+
   return {
     primary,
     handlePrimaryChange,
@@ -69,6 +100,14 @@ const useColor = () => {
     handleCardBackroundChange,
     cardForeground,
     handleCardForegroundChange,
+    accent,
+    handleAccentChange,
+    header,
+    handleHeaderChange,
+    buyButton,
+    handleBuyButtonChange,
+    addToButton,
+    handleAddToButtonChange,
   };
 };
 

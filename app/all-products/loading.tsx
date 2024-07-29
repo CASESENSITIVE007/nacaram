@@ -1,7 +1,6 @@
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {
-  // You can add any UI inside Loading, including a Skeleton.
   return (
     <div className="container mx-auto px-4 py-8 md:px-20">
       <h1 className="mb-6 text-center text-3xl font-semibold">Bags</h1>

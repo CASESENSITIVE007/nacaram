@@ -25,6 +25,8 @@ const config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         header: "var(--header)",
+        buyButton: "var(--buy-button)",
+        addToButton: "var(--add-to-button)",
         primary: {
           DEFAULT: "var(--primary)",
           foreground: "hsl(var(--primary-foreground))",
@@ -42,7 +44,7 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "var(--accent)",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {

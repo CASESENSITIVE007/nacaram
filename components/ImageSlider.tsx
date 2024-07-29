@@ -37,7 +37,7 @@ export default function ImageSlider({ className, images }: ImageSliderProps) {
                 className="h-full w-full"
                 src={image}
                 width={500}
-                height={500}
+                height={250}
                 alt="logo"
               />
             </div>

@@ -1,20 +1,13 @@
 "use client";
 import { FacebookIcon, TwitterIcon } from "lucide-react";
-import ProductImageGallery from "./ProductImageGallery";
 import QuantitySelector from "../QuantitySelector";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import ImageSlider from "../ImageSlider";
-
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  imageUrl: string[];
-  details: string;
-}
+import { Product } from "@/lib/products";
+import useColor from "@/hooks/useColor";
+import { Input } from "../ui/input";
 
 interface ProductDetailProps {
   product: Product;
@@ -22,6 +15,12 @@ interface ProductDetailProps {
 
 const ProductDetail = ({ product }: ProductDetailProps) => {
   const [quantity, setQuantity] = useState(1);
+  const {
+    buyButton,
+    addToButton,
+    handleAddToButtonChange,
+    handleBuyButtonChange,
+  } = useColor();
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -39,12 +38,28 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
           <div className="flex w-full justify-center md:justify-start">
             <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
           </div>
-          <Button className="mt-4 w-full rounded bg-blue-500 px-4 py-2 text-white">
-            Add to My Bag
-          </Button>
-          <Button className="mt-4 w-full rounded bg-purple-950 px-4 py-2 text-white">
-            Buy Now
-          </Button>
+          <div className="flex justify-between gap-4">
+            <Button className="bg-buyButton mt-4 w-full rounded px-4 py-2">
+              Buy Now
+            </Button>
+            <Input
+              type="color"
+              value={buyButton}
+              onChange={handleBuyButtonChange}
+              className="mt-4 w-10 rounded"
+            />
+          </div>
+          <div className="flex justify-between gap-4">
+            <Button className="bg-addToButton mt-4 w-full rounded px-4 py-2">
+              Add to My Bag
+            </Button>
+            <Input
+              type="color"
+              value={addToButton}
+              onChange={handleAddToButtonChange}
+              className="mt-4 w-10 rounded"
+            />
+          </div>
           <div className="mx-5 my-10 h-5 border-b-2 border-zinc-200"></div>
           <section className="flex justify-center gap-4">
             <Link
@@ -63,9 +78,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
 
       <div className="mx-auto mt-8 w-3/4 text-center">
         <div className="my-10 h-5 border-b-2 border-zinc-200 text-center text-2xl">
-          <span className="bg-white px-5 font-serif font-semibold">
-            Details
-          </span>
+          <span className="px-5 font-serif font-semibold">Details</span>
         </div>
         <p>{product.details}</p>
       </div>
