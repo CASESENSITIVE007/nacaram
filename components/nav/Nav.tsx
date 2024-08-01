@@ -66,6 +66,9 @@ export default function Nav() {
                 <ListItem href="/shop/Satchels" title="Satchels">
                   Elegant satchels combining style and functionality.
                 </ListItem>
+                <ListItem href="/shop/keyring" title="Keyrings">
+                  Elegant satchels combining style and functionality.
+                </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>

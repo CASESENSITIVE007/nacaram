@@ -12,9 +12,9 @@ export default function Home() {
       <ImageSlider images={images} />
       <div className="mt-4 flex flex-col justify-center md:px-8 lg:mx-auto lg:max-w-[1400]">
         <MustHaves />
-        <AboutCraftmanship />
         <HomeFeatured />
         <HomeCollection />
+        <AboutCraftmanship />
       </div>
     </div>
   );

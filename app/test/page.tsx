@@ -184,7 +184,7 @@ const Page = () => {
                           </div>
 
                           <div className="mt-4 w-20 sm:mt-0 sm:pr-9">
-                            <div className="absolute right-0 top-0">
+                            <div className="group absolute right-0 top-0 transition-all">
                               <Button
                                 aria-label="remove product"
                                 // onClick={() =>
@@ -193,6 +193,9 @@ const Page = () => {
                                 variant="ghost"
                               >
                                 <X className="h-5 w-5" aria-hidden="true" />
+                                <div className="hidden transition-all group-hover:flex">
+                                  Remove
+                                </div>
                               </Button>
                             </div>
                           </div>

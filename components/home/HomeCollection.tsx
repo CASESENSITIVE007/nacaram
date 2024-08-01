@@ -1,16 +1,23 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import image from "@/public/onsale.png";
+import E1 from "@/public/images/E1.jpg";
+import B1 from "@/public/images/blossomClutch1.2.jpg";
+import B2 from "@/public/images/blossomClutch2.jpg";
+import C3 from "@/public/images/C3.jpg";
+import C4 from "@/public/images/C4.jpg";
+import acc from "@/public/images/acc1.2.jpg";
+import S3 from "@/public/images/S3.jpg";
+import T1 from "@/public/images/T1.jpg";
 import Image from "next/image";
 
 const images = [
-  { id: 1, src: image, alt: "image" },
-  { id: 2, src: image, alt: "image" },
-  { id: 3, src: image, alt: "image" },
-  { id: 4, src: image, alt: "image" },
-  { id: 5, src: image, alt: "image" },
-  { id: 6, src: image, alt: "image" },
-  { id: 7, src: image, alt: "image" },
-  { id: 8, src: image, alt: "image" },
+  { id: 1, src: E1, alt: "image" },
+  { id: 2, src: B1, alt: "image" },
+  { id: 3, src: B2, alt: "image" },
+  { id: 4, src: C3, alt: "image" },
+  { id: 5, src: C4, alt: "image" },
+  { id: 6, src: acc, alt: "image" },
+  { id: 7, src: S3, alt: "image" },
+  { id: 8, src: T1, alt: "image" },
 ];
 
 export default function HomeCollection() {

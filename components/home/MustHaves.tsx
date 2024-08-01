@@ -5,7 +5,9 @@ import {
   CardFooter,
   CardTitle,
 } from "@/components/ui/card";
-import image from "@/public/onsale.png";
+import Clutches from "@/public/images/C3.jpg";
+import Totes from "@/public/images/T1.jpg";
+import Satchels from "@/public/images/S1.jpg";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
@@ -14,15 +16,15 @@ import Link from "next/link";
 const images = [
   {
     id: 1,
-    src: image,
+    src: Clutches,
     alt: "image",
     href: "/shop/Clutches",
     title: "Clutches",
   },
-  { id: 2, src: image, alt: "image", href: "/shop/Totes", title: "Totes" },
+  { id: 2, src: Totes, alt: "image", href: "/shop/Totes", title: "Totes" },
   {
     id: 3,
-    src: image,
+    src: Satchels,
     alt: "image",
     href: "/shop/Satchels",
     title: "Satchels",

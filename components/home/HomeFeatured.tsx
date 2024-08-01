@@ -1,11 +1,12 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import image from "@/public/bag.png";
+import blossomImage from "@/public/images/blossomClutch1.2.jpg";
+import T1 from "@/public/images/T1.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
 const images = [
-  { id: 1, src: image, alt: "image", href: "/product/1" },
-  { id: 2, src: image, alt: "image", href: "/product/2" },
+  { id: 1, src: blossomImage, alt: "image", href: "/product/1" },
+  { id: 2, src: T1, alt: "image", href: "/product/2" },
   // { id: 3, src: image, alt: "image", href: "/product/3" },
   // { id: 4, src: image, alt: "image", href: "/product/4" },
 ];
