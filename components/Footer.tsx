@@ -1,7 +1,9 @@
-import React from "react";
-import background from "../components/bgimg.jpg";
-import bg from "./bg_image.jpg"
 
+'use client';
+import React from "react";
+let joinBtn=(event)=>{
+  event.preventDefault();
+}
 import {
   InstagramIcon,
   FacebookIcon,
@@ -9,6 +11,7 @@ import {
   Twitter,
 } from "lucide-react";
 import Link from "next/link";
+
 const Footer = () => {
   return (
     <div className="footer bg-header  mt-12 h-2/6 pb-10 p-5 pt-12 lg:font-xl font-serif bg-cover bg-center  bg-bg_image "   >
@@ -31,7 +34,7 @@ const Footer = () => {
               type="text"
               placeholder="Enter Email Address"
             />
-            <button className="h-10 w-12 bg-black text-white">Join</button>
+            <button className="h-10 w-12 bg-black text-white" onClick={joinBtn} >Join</button>
           </form>
         </div>
         <div className="aboutus lg:border-t flex flex-col justify-center lg:text-center md:text-right ">
@@ -48,13 +51,13 @@ const Footer = () => {
       <div className="lower">
         <div className="socialIcons mb-5 mr-3.5 mt-8 flex justify-center gap-4 pb-0 pr-0 pt-8">
           <div className="insta">
-            <InstagramIcon />
+            <Link href="https://www.instagram.com/" target="_blank"> <InstagramIcon /></Link>
           </div>
           <div className="fb">
-            <FacebookIcon />
+            <Link href="https://www.facebook.com/" target="_blank"><FacebookIcon /></Link>
           </div>
           <div className="twitter">
-            <TwitterIcon />
+            <Link href="https://www.twitter.com/" target="_blank"><TwitterIcon /></Link>
           </div>
         </div>
 
