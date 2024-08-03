@@ -10,6 +10,9 @@ const config = {
   ],
   prefix: "",
   theme: {
+
+    
+   
     container: {
       center: true,
       padding: "2rem",
@@ -18,6 +21,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'bg_image' : "url('/bg_image.jpg')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
