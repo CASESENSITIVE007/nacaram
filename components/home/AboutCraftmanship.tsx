@@ -31,7 +31,7 @@ export default function AboutCraftmanship() {
             </Link>
           </div>
           <div className="mb-4 w-full justify-self-center overflow-clip rounded-lg bg-amber-500">
-            <Image src={craft} alt="craftman" className="object-cover" />
+            <Image src={craft} alt="craftman" className="object-cover" />  
           </div>
         </CardContent>
       </Card>
