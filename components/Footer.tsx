@@ -1,7 +1,7 @@
 
 'use client';
 import React from "react";
-let joinBtn=(event)=>{
+const joinBtn = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
 }
 import {
@@ -34,7 +34,7 @@ const Footer = () => {
               type="text"
               placeholder="Enter Email Address"
             />
-            <button className="h-10 w-12 bg-black text-white" onClick={joinBtn} >Join</button>
+            <button className="h-10 w-12 bg-black text-white" type="submit" >Join</button>
           </form>
         </div>
         <div className="aboutus lg:border-t flex flex-col justify-center lg:text-center md:text-right ">
