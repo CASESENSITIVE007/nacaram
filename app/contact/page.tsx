@@ -1,6 +1,6 @@
 export default function contact() {
   return (
-    <div>
+    <div className="font-serif" >
       <h1 className="mb-10 mt-10 text-center text-lg font-bold">Contact Us</h1>
       <p className="m-auto w-9/12 border-solid text-center font-normal tracking-widest">
         We would like to assist you in any way that we can. Our team is
@@ -15,7 +15,7 @@ export default function contact() {
       <h1 className="mb-10 mt-10 text-center text-lg font-bold">By Email</h1>
       <a
         className="m-auto flex w-9/12 justify-center font-normal tracking-widest"
-        href="https://mail.google.com"
+        href="https://mail.google.com" target="_blank"
       >
         xyz@gmail.com
       </a>
